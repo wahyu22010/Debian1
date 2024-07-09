@@ -72,7 +72,7 @@ mkdir -p Downloads
 
 #Download required install scripts
 wget https://github.com/wahyu22010/Debian/raw/main/xfce.sh
-wget https://github.com/wahyu22010/Debian/raw/main/proot.sh
+wget https://github.com/wahyu22010/Debian1/raw/main/proot.sh
 wget https://github.com/wahyu22010/Debian/raw/main/utils.sh
 chmod +x *.sh
 
