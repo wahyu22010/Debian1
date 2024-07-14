@@ -4,8 +4,9 @@
 repo_owner="wahyu22010"
 repo_name="Debian"
 script_path="install.sh"
-access_token="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"
+access_token="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"  # Ganti dengan token akses yang valid
 
 # Mengambil skrip bash dari repositori GitHub privat
 curl -sSfL -H "Authorization: token $access_token" \
-     "https://raw.githubusercontent.com/wahyu22010/Debian/main/install.sh"  -o install.sh && chmod +x install.sh && ./install.sh | bash
+     "https://raw.githubusercontent.com/$repo_owner/$repo_name/main/$script_path" \
+     -o install.sh && chmod +x install.sh && ./install.sh
