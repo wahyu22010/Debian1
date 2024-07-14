@@ -4,7 +4,7 @@
 repo_owner="wahyu22010"
 repo_name="Debian"
 script_path="install.sh"
-access_token="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"
+access_token="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"
 
 # Mengambil skrip bash dari repositori GitHub privat
 curl -sSfL -H "Authorization: token $access_token" \
