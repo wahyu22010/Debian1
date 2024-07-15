@@ -1,8 +1,29 @@
 #!/bin/bash
 
-# Ganti dengan URL repositori GitHub privat dan PAT Anda
-repo_url="https://raw.githubusercontent.com/wahyu22010/ubuntu/main/install.sh"
-token="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"
+# Pengaturan
+repo_owner="wahyu22010"
+repo_name="ubuntu"
+script_path="install.sh"
+access_token=""  # Ganti dengan token akses yang valid
 
-# Mengambil isi file dari repositori menggunakan curl
-curl -H "Authorization: token $token" -H "Accept: application/vnd.github.v3.raw" -o script.sh $repo_url
+# URL untuk mengambil skrip bash dari repositori GitHub privat
+url="https://raw.githubusercontent.com/$repo_owner/$repo_name/main/$script_path"
+
+# Mengambil skrip bash menggunakan curl
+response=$(curl -sSfL -H "Authorization: token $access_token" "$url")
+
+# Periksa kode status HTTP dari curl
+status=$?
+if [ $status -ne 0 ]; then
+    echo "Error: Curl command failed with status $status"
+    exit $status
+fi
+
+# Menyimpan skrip bash ke dalam file lokal
+echo "$response" > "$script_path"
+
+# Berikan izin eksekusi pada script yang diunduh
+chmod +x "$script_path"
+
+# Jalankan script bash yang diunduh
+./"$script_path"
