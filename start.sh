@@ -7,6 +7,3 @@ curl -H "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" \
  
  # Berikan izin eksekusi pada script yang diunduh
 chmod +x install.sh
-
-# Jalankan script bash yang diunduh
-./install.sh
