@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Pengaturan
-repo_owner="wahyu22010"
-repo_name="ubuntu"
-file_path="install.sh"
-access_token="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"  # Ganti dengan token akses yang valid
-
-# URL untuk mengambil file raw dari repositori GitHub privat
-url="https://raw.githubusercontent.com/$repo_owner/$repo_name/main/$file_path"
-
-# Mengambil file raw menggunakan curl dengan header Authorization
-curl -H "Authorization: token $access_token" \
+curl -H "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" \
 -H "Accept: application/vnd.github.v3.raw" \
--O "$url"
-chmod +x "$file_path"
+-O https://raw.githubusercontent.com/wahyu22010/Debian/main/install.sh 
