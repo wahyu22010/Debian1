@@ -2,7 +2,7 @@
 
 # Pengaturan
 repo_owner="wahyu22010"
-repo_name="Debian"
+repo_name="ubuntu"
 file_path="install.sh"
 access_token="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"  # Ganti dengan token akses yang valid
 
